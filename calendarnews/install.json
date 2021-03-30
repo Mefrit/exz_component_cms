@@ -1,0 +1,29 @@
+{
+    "name": "Календарь Новостей",
+    "module": "iblock",
+    "parameter": [{
+            "name": "id_news_list",
+            "label": "Лента новостей",
+            "type": "select1",
+            "allow": true,
+            "options.db": "iblock:id_iblock,title"
+        },
+        {
+            "name": "page_id",
+            "label": "Страница, где выложена коллекция новостей",
+            "type": "select1",
+            "options.all_res": "page"
+        }, {
+            "name": "color",
+            "label": "Выберите цвет календарика",
+            "type": "color_choose"
+        }
+    ],
+    "parameterFieldForm": [{
+        "namefield": "color_choose",
+        "nameclass": "ColorChoose"
+    }],
+
+    "component": "calendarnews",
+    "title": "Календарь Новостей"
+}

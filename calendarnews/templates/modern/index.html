@@ -1,0 +1,112 @@
+<div class="">
+    <div id="calendar" class="calendar_new">
+        Загрузка...
+    </div>
+</div>
+<style>
+    .calendar-head div {
+        float: left;
+        width: 50px;
+        text-align: center;
+        color: #7b7b7b;
+    }
+    
+    .calendar_new {
+        width: 220px;
+        border: 1px solid rgb(119, 119, 119);
+        border-radius: 2px;
+        float: left;
+        height: 285px;
+    }
+    
+    .calendar-body .day {
+        font-size: 10px;
+        width: 25px;
+        padding: 5px;
+        padding-top: 10px;
+        text-align: center;
+        color: rgb(73, 73, 73);
+    }
+    
+    .calendar-body .no-day {
+        background: none;
+    }
+    
+    .calendar-body {
+        padding: 10px 0px;
+        margin: 10px;
+    }
+    
+    .news_day {
+        background-color: #cb0fec;
+        font-size: 12px;
+        padding-top: 10px;
+        text-align: center;
+    }
+    
+    .news_day a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .calendarInterface {
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%;
+        min-height: 85px;
+        max-width: 220px;
+        padding: 10px;
+        padding-top: 17px;
+        float: left;
+        background-color: #9c0ab6;
+        margin-bottom: 5px;
+    }
+    
+    .calendarInterface__year,
+    .calendarInterface__month {
+        margin: 2px;
+        width: 100%;
+        color: white;
+        float: left;
+        text-align: center;
+        font-weight: 500;
+    }
+    
+    .calendarInterface__left,
+    .calendarInterface__date,
+    .calendarInterface__right {
+        float: left;
+        fill: white
+    }
+    
+    .calendarInterface__left,
+    .calendarInterface__right {
+        width: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    
+    .calendarInterface__left {
+        transform: rotate(180deg);
+    }
+    
+    .calendarInterface__date {
+        width: 80%;
+        font-size: 17px;
+    }
+</style>
+
+<link rel="stylesheet" type="text/css" href="${component}/style.css" />
+<script type="text/javascript">
+    /*<![CDATA[*/
+    require(['calendarnews/calendarnews'], function(calendarnews) {
+
+        /*]]>*/
+        var id_news_list = "${structure id_news_list}",
+            path2page = "${structure path2page}",
+            background_color = "${structure background_color}";
+        /*<![CDATA[*/
+        var calendarnews = new calendarnews.DocumentListRenderer(id_news_list, path2page, background_color);
+        /*]]>*/
+    });
+</script>
